@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Why use these systems?</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/style/why/style.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/why.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top" id="navbar">
+                <a class="navbar-brand" id="nav-title nav-text" onclick="returnAll()">Alltheponics</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active nav-text">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item nav-text">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item nav-text">
+                        <a class="nav-link" href="./why.html">Reasons Why</a>
+                      </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Language
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">French</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            <div id="page1">
+                <div id="top"></div>
+                <div id="left"></div>
+                <div id="right"></div>
+                <div id="down"></div>
+                <h1 class="display-4" id="title">Reasons why we should use: </h1>
+                <div id="arrow"></div>
+                <button class="btn btn-lg" id="hydro-btn" onclick="hydro()">Hydroponics</button>
+                <button class="btn btn-lg"id="aero-btn" onclick="aero()">Aeroponics</button>
+                <button class="btn btn-lg" id="aqua-btn" onclick="aqua()">Aquaponics</button>
+            </div>
+
+        </div>
+        <div id="hydro">
+            <h1 class="display-4" id="title">Why use Hydroponics?</h1>
+            <div id="water-eff">
+                <svg width="15%" viewbox="0 0 30 42" id="teardrop">
+                    <path fill="white" stroke="#000" stroke-width="0" id="drop"
+                          d="M15 3
+                             Q16.5 6.8 25 18
+                             A12.8 12.8 0 1 1 5 18
+                             Q13.5 6.8 15 3z" />
+                </svg>
+                <p id="text"><span class="lead">Because</span><br><span>it uses up to 10 times less<br>water.</span> </p>
+            </div>
+            <div id="return-parent" onclick="back()">
+                <i class="fa fa-chevron-right" id="chevron"></i>
+                <p id="return-text" class="lead">Return</p>
+            </div>
+        </div>
+        <div id="aero">
+            <div id="return-parent" onclick="back()">
+                <i class="fa fa-chevron-left" id="chevron"></i>
+                <p id="return-text" class="lead">Return</p>
+            </div>
+        </div>
+        <div id="aqua">
+          <h1 class="display-4" id="title">Why use Aquaponics?</h1>
+          <div id="return-parent" onclick="back()">
+            <i class="fa fa-chevron-up" id="chevron"></i>
+        </div>
+        </div>
+        <!--Cursor-->
+        <script>
+            const cursor = document.querySelector('.cursor')
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+ (e.pageY - 20)+"px; left: "+(e.pageX - 15)+"px")
+            });
+    
+            document.addEventListener("click", function(){
+                cursor.classList.add("grow")
+                setTimeout(function(){
+                    cursor.classList.remove("grow")
+                }, 500)
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+{
+    "particles": {
+        "number": {
+            "value": 20
+        },
+        "opacity": {
+            "value": 0.6,
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 0.5
+            }
+        },
+        "size": {
+            "value": 5
+        },
+        "line_linked": {
+            "enable": false
+          },
+        "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "top"
+        },
+        "interactivity": {
+            "detect_on": "window",
+            "events": {
+                "onhover": {
+                  "enable": false,
+                  "mode": "grab"
+                },
+              "onclick": {
+                  "enable": false
+              }
+            }
+          }
+    }
+}

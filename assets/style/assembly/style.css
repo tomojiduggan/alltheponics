@@ -1,0 +1,65 @@
+#page #screen-1 {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#page #screen-1 #title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+#page #screen-1 #step-1 {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page #screen-1 #step-1 #sub-step-1 {
+  background-color: white;
+}
+
+#page #screen-1 #step-1 #sub-step-1 #step-title-1 {
+  margin-top: 45px;
+}
+
+#page #screen-1 #step-1 #sub-step-2 {
+  background-color: #afafaf;
+}
+
+#page #screen-1 #step-2 {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page #screen-1 #step-2 #sub-step-1 {
+  background-color: #00c3ff;
+}
+
+#page #screen-1 #step-2 #sub-step-2 {
+  background-color: grey;
+}
+
+#page #screen-1 .step-title {
+  font-size: 35px;
+}
+
+#page #screen-1 .sub-step {
+  width: 50%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

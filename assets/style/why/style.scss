@@ -1,0 +1,266 @@
+
+@mixin page{
+    height: 100vh;
+    width: 100%;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow: hidden !important;
+}
+.btn{
+    background-color: rgb(0, 119, 182);
+    color: white !important;
+    border: none;
+}
+.btn:hover{
+    background-color: rgb(2, 62, 138);
+}
+#navbar{
+    width: 100vw;
+    transition: .5s background-color;
+    z-index: 15;
+    a{
+        color: inherit;
+        text-decoration: inherit;
+    }
+    .nav-text{
+       color: black; 
+       border-bottom: 1px solid transparent;
+    }
+    .nav-text:hover{
+        border-bottom: 1px solid white;
+        transition: 0.5s;
+    }
+
+}
+#navbar:hover{
+    color: white !important;
+    background-color: black !important;
+    .nav-text{
+        color: white !important;
+    }
+}
+#page1{
+    @include page;
+        color: white;
+    #top{
+        width: 100vw;
+        height: 50%;
+        background-color: rgb(0, 150, 199);
+        position: absolute;
+        transition: 0.5s background-color;
+        clip-path: polygon(0% 0%, 100% 0%, 50% 100%)
+    }//rgb(56, 188, 197);
+    #left{
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(0, 180, 216);
+        position: absolute;
+        transition: 0.5s background-color;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%)
+    }
+    #right{
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(0, 180, 216);
+        position: absolute;
+        left: 50vw;
+        transition: 0.5s background-color;
+        clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+    }
+    #down{
+        width: 100%;
+        height: 50%;
+        background-color: rgb(72, 202, 228);
+        position: absolute;
+        transition: 0.5s background-color;
+        top: 50%;
+        clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    }
+    #title{
+        width: 100vw;
+        text-align: center;
+        padding-top: 80px;
+        position: absolute;
+    }
+    #arrow{
+        clip-path: polygon(0% 0%, 0% 50%, 0% 100%, 50% 100%, 100% 100%, 100% 50%, 100% 0%);
+        height: 15vw;
+        width: 15vw;
+        background-color: rgb(2, 62, 138);
+        position: absolute;
+        top: 50vh;
+        left: 42.5vw;
+        transform: translateY(-7.5vw) scale(0.7);
+        transition: 0.5s clip-path, 0.5s transform;
+    }
+    #hydro-btn{
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-25px);
+    }
+    #aero-btn{
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-25px);
+
+    }
+    #aqua-btn{
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-70px);
+    }
+}
+
+#hydro{
+    left: -100%;
+    top: 0%;
+    position: absolute;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: rgb(0, 119, 182);
+    @include page;
+    #title{
+        color: white;
+        width: 100vw;
+        text-align: center;
+        padding-top: 75px;
+    };
+    #water-eff{
+        width: 300px;
+        margin-left: 50px;
+        position: absolute;
+        #teardrop{
+            width: 100%;
+            #drop{
+                fill:rgb(102, 184, 223);
+
+            }
+        };
+        #text{
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 220px;
+            left: 30px;
+            width: 80%;
+            text-align: center;
+            transform: scale(1.1)
+        }
+    };
+    #return-parent{
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        transform: translateY(-50px);
+        border: 2px solid transparent;
+        transition: 0.5s transform, 0.5s border;
+        #chevron{
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            top: 25px;
+            left: 35px;
+        }
+        #return-text{
+            position: absolute;
+            top: -35px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+    }
+    #return-parent:hover{
+        transform: translateY(-50px) translateX(20px);
+        border: 2px solid white;
+    }
+}
+#aero{
+    left: 100%;
+    top: 0%;
+    position: absolute;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: rgb(0, 119, 182);
+    @include page;
+    #return-parent{
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        transform: translateY(-50px);
+        border: 2px solid transparent;
+        transition: 0.5s transform, 0.5s border;
+        #chevron{
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            top: 25px;
+            left: 30px;
+        }
+        #return-text{
+            position: absolute;
+            top: -35px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+    }
+    #return-parent:hover{
+        transform: translateY(-50px) translateX(-20px);
+        border: 2px solid white;
+    }
+}
+#aqua{
+    top: 100%;
+    position: absolute;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: rgb(0, 119, 182);
+    @include page;
+    #title{
+        color: white;
+        width: 100vw;
+        text-align: center;
+        padding-top: 150px;
+    };
+    #return-parent{
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        height: 100px;
+        transform: translateX(-50px);
+        width: 100px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: 0.5s transform, 0.5s border;
+        #chevron{
+            color: white;
+            font-size: 50px;
+            position: absolute;
+            top: 25px;
+            left: 30px;
+        }
+        #return-text{
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            text-align: center;
+            color: white;
+        }
+    }
+    #return-parent:hover{
+        transform: translateY(-15px) translateX(-50px) ;
+        //border: 2px solid white;
+    }
+}
